@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Recommendations</title>
+    <style>
+        body {
+            background-image: url("img.jpg");
+            background-size: cover;
+            background-position: center;
+            color: black;
+            text-align: center;
+            padding: 50px; /* Adjust as needed */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Restaurant Recommendations</h1>
+    <br>
+    <p>Recommendations for <strong>{{ restaurant_name }}</strong>:</p>
+    <br>
+    <ul>
+        {% for restaurant in recommended_restaurants %}
+            <li>{{ restaurant }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
